@@ -17,6 +17,7 @@ Assets/Plugins/Editor/JetBrains*
 [Bb]uild/
 [Bb]uilds/
 Assets/AssetStoreTools*
+Assets/Sandbox/
 # Unity local user project setting
 UserSettings/
 
