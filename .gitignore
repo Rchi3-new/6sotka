@@ -18,6 +18,7 @@ Assets/Plugins/Editor/JetBrains*
 [Bb]uilds/
 Assets/AssetStoreTools*
 Assets/Sandbox/
+Logs*
 
 # Unity local user project setting
 UserSettings/
