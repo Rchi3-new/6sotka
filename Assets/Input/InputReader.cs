@@ -1,10 +1,12 @@
 ﻿using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class InputReader : MonoBehaviour
+public class Input : MonoBehaviour
 {
     public System.Action<Vector2> OnClick;
     [SerializeField] private GameObject clickIndicatorPrefab;
+    
+    private BuildSystem buildSystem;
 
     void Update()
     {
@@ -23,7 +25,7 @@ public class InputReader : MonoBehaviour
         }
     }
 
-    void SendClick(Vector2 screenPosition)
+    private void SendClick(Vector2 screenPosition)
     {
         Vector3 screenPoint = new Vector3(
             screenPosition.x,
@@ -32,9 +34,7 @@ public class InputReader : MonoBehaviour
         );
 
         Vector3 world = Camera.main.ScreenToWorldPoint(screenPoint);
-
-        Instantiate(clickIndicatorPrefab, new Vector3(world.x, world.y, 0), Quaternion.identity);
-
+       
         OnClick?.Invoke(new Vector2(world.x, world.y));
     }
 }

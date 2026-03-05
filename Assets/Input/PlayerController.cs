@@ -2,16 +2,19 @@
 
 public class PlayerController : MonoBehaviour
 {
+    private BuildSystem buildSystem;
     private CharacterMotor2D motor;
-    private InputReader input;
+    private Input input;
 
     void Awake()
     {
+        buildSystem = FindAnyObjectByType<BuildSystem>();
+        
         motor = GetComponent<CharacterMotor2D>();
         if (motor == null)
             Debug.LogError("Motor not found on Player!");
 
-        input = FindFirstObjectByType<InputReader>();
+        input = FindFirstObjectByType<Input>();
         if (input == null)
             Debug.LogError("InputReader not found in scene!");
     }
