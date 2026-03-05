@@ -16,6 +16,7 @@ Assets/AssetStoreTools*
 # Crash reports
 sysinfo.txt
 
+
 # User-specific settings
 UserSettings/
 
@@ -25,6 +26,7 @@ UserSettings/
 
 # Rider / JetBrains
 .idea/
+*.sln
 
 # VS Code
 .vscode/
